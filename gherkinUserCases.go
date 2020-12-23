@@ -57,7 +57,7 @@ func main() {
 				log.Println("Template Error:", err)
 			}
 		} else {
-			skipped = skipped + 1
+			skipped++
 		}
 	}
 }
