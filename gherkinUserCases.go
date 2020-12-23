@@ -48,16 +48,13 @@ func main() {
 	}
 
 	t := template.Must(template.New("gherkin").Parse(gherkinTemplate))
-	skipped := 0
 	for i, v := range userTypes {
 		if int(v.Level) >= *accessLevelPtr {
-			fmt.Printf("Scenario %d: ", i+1-skipped)
+			fmt.Printf("Scenario %d: ", i+1-*accessLevelPtr)
 			err := t.Execute(os.Stdout, v)
 			if err != nil {
 				log.Println("Template Error:", err)
 			}
-		} else {
-			skipped++
 		}
 	}
 }
