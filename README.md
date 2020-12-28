@@ -62,3 +62,8 @@ Scenario 4:  User with ADMIN level access go to a party
 * Fills in the THEN part
 * Receives a string
 * Defaults to "write what should happen here"
+
+#### -andStr
+* Allows for AND clauses
+* Receives a string
+* Separate ANDs by &amp;
